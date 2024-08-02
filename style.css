@@ -1,0 +1,230 @@
+* {
+    font-family: 'Manrope', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --main-color: #62A778;
+    --sec-color: #E7D0C5;
+    --third-color: #E6F7E6;
+}
+
+/***** Header *****/
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.1);
+    background-color: #FFFFF0;
+}
+
+header .logo {
+    width: 220px;
+    padding: 2px 0;
+}
+
+header ul {
+    display: flex;
+    align-items: space-between;
+    gap: 40px;
+    list-style-type: none;
+}
+
+header li a {
+    text-decoration: none;
+    color: var(--main-color);
+    font-weight: 600;
+    font-size: 17px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px 5px 20px;
+}
+
+/***** Présentation *****/
+
+.carres {
+    display: flex;
+    height: 90%;
+}
+
+.carres article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    color: var(--main-color);
+    background: var(--third-color);
+}
+
+.carres article h1 {
+    font-size: 4.5em;
+    margin-bottom: .5em;
+}
+
+.carres article h2 {
+    font-size: 1.8em;
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.carres article button {
+    background-color: var(--main-color);
+    font-size: 1.3em;
+    font-weight: 700;
+    color:white;
+    padding: 20px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+.carres article img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/***** Profil & Tarifs *****/
+
+.profil, .tarifs {
+    height: 90%;
+    background-color: var(--main-color);
+}
+
+.profil h2, .tarifs h2 {
+    font-family: "Meow Script", cursive;
+    color: var(--third-color);
+    font-size: 5em;
+    font-weight: 100;
+    text-align: center;
+    padding: 60px 0 60px 0;
+}
+
+.parcours {
+    display: flex;
+    gap: 45px;
+    justify-content: center;
+    height: 325px;
+}
+
+.parcours li {
+    list-style-type: none;
+}
+
+.petit-carre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--third-color);
+    height: 330px;
+    width: 350px;
+    border-radius: 30px;
+    padding: 30px;
+    color: var(--main-color);
+    transition: transform 0.3s ease;
+    text-align: center;
+}
+
+.petit-carre:hover {
+    transform: scale(1.05);
+}
+
+.petit-carre h3 {
+    font-size: 1.5em;
+    align-self: center;
+}
+
+.petit-carre p {
+    flex-grow: 1; /* Permet au texte de prendre tout l'espace disponible */
+    display: flex;
+    font-size: 1.15em;
+    align-items: center;
+    justify-content: center;
+}
+
+/***** La thérapie *****/
+
+.carres2 {
+    display: flex;
+    height: 90%;
+}
+
+.carres2 article {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    color: var(--main-color);
+    background-color: var(--third-color);
+}
+
+.carres2 article h1 {
+    font-size: 4.5em;
+    margin-bottom: .5em;
+}
+
+.carres2 article h2 {
+    font-size: 2em;
+    text-align: left;
+    padding: 80px 125px;
+    margin-bottom: 2em;
+}
+
+.carres2 article button {
+    background-color: var(--main-color);
+    font-size: 1.3em;
+    font-weight: 700;
+    color: var(--third-color);
+    padding: 20px 30px;
+    border: none;
+    border-radius: 50px;
+}
+
+.therapie {
+    background-color: var(--sec-color);
+}
+
+/***** Contact *****/
+
+.contact {
+    background-color: var(--third-color);
+    padding: 50px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 50px;
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: var(--main-color);
+}
+
+.contact-container svg {
+    margin-bottom: 20px;
+}
+
+.map {
+    display: flex;
+    justify-content: center;
+}
+
+.map iframe {
+    border-radius: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}

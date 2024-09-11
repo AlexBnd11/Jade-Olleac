@@ -314,6 +314,13 @@ nav ul {
 
     /***** Contact *****/
 
+.contact {
+    flex-direction: column;
+}
 
+.map {
+    padding-left: 30px;
+    padding-right: 30px;
+}
 
 }

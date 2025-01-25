@@ -7,9 +7,10 @@
 }
 
 :root {
-    --main-color: #62A778;
+    --main-color: #5aa772;
     --sec-color: #E7D0C5;
     --third-color: #E6F7E6;
+    --fourth-color: #05561f;
 }
 
 html,body {
@@ -141,14 +142,27 @@ nav {
     border-radius: 30px;
     padding: 30px;
     color: var(--main-color);
-    transition: transform 0.3s ease;
     text-align: center;
     margin-top: 75px;
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
 }
 
-.petit-carre:hover {
-    transform: scale(1.05);
+.petit-carre.visible {
+    animation: slideUp 0.8s forwards;
 }
+
+@keyframes slideUp {
+    0% {
+      opacity: 0;
+      transform: translateY(100px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 
 .petit-carre h3 {
     font-size: 1.5em;
@@ -201,24 +215,78 @@ nav {
 
 .contact {
     background-color: var(--third-color);
-    padding: 50px 0;
+    padding: 50px 40px;
     display: flex;
     justify-content: space-around;
 }
 
 .contact-container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-around;
-    padding: 50px;
+    justify-content: space-between;
     text-align: center;
     font-size: 1.2em;
     font-weight: 600;
     color: var(--main-color);
 }
 
-.contact-container svg {
+.contact-container h2 {
     margin-bottom: 20px;
+}
+
+@media (min-width: 1110px) {
+    .contact-container h2 {
+        font-size: 2.15vw;
+    }
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 550px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 10px;
+    border: 1px solid var(--main-color);
+    border-radius: 5px;
+    font-size: 16px;
+    color: #34a859;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #72957d;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+}
+
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+.contact-form button {
+    background-color: var(--main-color);
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.contact-form button:hover {
+    opacity: 0.9;
 }
 
 .map {
@@ -323,4 +391,24 @@ nav ul {
     padding-right: 30px;
 }
 
+}
+
+.form-message {
+    padding: 10px;
+    border-radius: 5px;
+    display: none;
+    text-align: center;
+    font-weight: 600;
+}
+
+.form-message.success {
+    display: block;
+    background-color: var(--third-color);
+    color: var(--fourth-color);
+}
+
+.form-message.error {
+    display: block;
+    background-color: #ffebee;
+    color: #c62828;
 }

@@ -384,6 +384,21 @@ nav ul {
 
 .contact {
     flex-direction: column;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .contact {
+        padding: 10px;
+    }
+}
+
+.contact-form {
+    width: 100%;
+}
+
+.contact-form {
+    width: 100%;
 }
 
 .map {

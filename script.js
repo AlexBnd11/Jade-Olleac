@@ -77,3 +77,24 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+// Gestion de l'accordéon FAQ
+document.addEventListener('DOMContentLoaded', () => {
+  const faqItems = document.querySelectorAll('.faq-item');
+  
+  faqItems.forEach(item => {
+    const question = item.querySelector('.faq-question');
+    
+    question.addEventListener('click', () => {
+      // Fermer tous les autres éléments FAQ
+      faqItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          otherItem.classList.remove('active');
+        }
+      });
+      
+      // Toggle l'élément actuel
+      item.classList.toggle('active');
+    });
+  });
+});
